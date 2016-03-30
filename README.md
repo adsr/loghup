@@ -14,8 +14,9 @@ loghup
 
 loghup execs `<command>` and captures its stdout and stderr at the paths
 specified by `-o` and `-e` respectively. When loghup receives a SIGHUP (or other
-signal specified by `-s`), it closes and reopens log handles (useful for log
-rotation). If `-f` is specified, the signal is forwarded to the child process.
+signal specified by `-s`), it closes and reopens these log handles (useful for
+log rotation). If `-f` is specified, the signal is forwarded to the child
+process.
 
 Note that is mainly useful for legacy apps that don't manage their own logging
 and/or only write to stdout/stderr. If you are writing something from scratch,
@@ -24,8 +25,8 @@ consider using something like log4j.
 Also note that there is a small overhead for copying log data over pipes that
 one could avoid entirely by logging directly to disk from your process.
 
-Nevertheless, see `TODO` for some ideas that may make this program useful in
-other scenarios.
+Nevertheless, see the TODO section for some ideas that may make this program
+useful in other scenarios.
 
 # Build
 
